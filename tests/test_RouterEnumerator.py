@@ -1,6 +1,9 @@
 import unittest
 from router_enumerator.RouterEnumerator import RouterEnumerator
 from pathlib import Path, PurePath
+from selenium import webdriver
+
+driver = webdriver.Firefox()
 
 TEST_RESOURCES_DIR = Path('./test_resources/')
 assert TEST_RESOURCES_DIR.is_dir()
@@ -12,6 +15,15 @@ TPLINK_ARCHER_C8_HTML = TPLINK_ARCHER_C8_PAGE_FILE.read_text(encoding='UTF-8')
 
 class TestRouterEnumerator(unittest.TestCase):
 
+    # This is a test for routers on this specific ip address
+    # We assume that the title for the page is "Home"
+    def test_192_168_1_254(self):
+        router_enumerator = RouterEnumerator()
+        expected_url = "http://192.168.1.254/"
+        driver.get("http://192.168.1.254/")
+        self.assertEquals(expected_url, "http://192.168.1.254/")
+
+    # Not going to work without this router
     def test_tplink_archer_c8_html_returns_correct_name_when_enumerating_from_source(self):
         page_html = TPLINK_ARCHER_C8_HTML
 
