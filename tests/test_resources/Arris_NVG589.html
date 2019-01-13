@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+        <title>Status</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="type">
+        <link rel="icon" type="image/ico" href="http://192.168.2.254/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="Arris_NVG589_files/baseINID.css">
+        <link rel="stylesheet" type="text/css" href="Arris_NVG589_files/INID.css">
+<script type="text/css"><!--
+<style id="antiClickjack" type="text/css">body{display:none;}</style>
+//-->
+</script>
+    <script language="javascript" type="text/javascript"><!--
+  adImages=new Array('/images/Block1.gif','/images/Block3.gif','/images/Block5.gif','/images/Block7.gif','/images/Block9.gif','/images/Block11.gif','/images/Block14.gif')
+  thisAd=0
+  imgCt=adImages.length
+if (self == top) {
+    var antiClickjack = document.getElementById("antiClickjack");
+    antiClickjack.parentNode.removeChild(antiClickjack);
+} else {
+    top.location = self.location;
+}
+function rotate(){
+	if (document.images) {
+		thisAd++
+		if (thisAd==imgCt){
+			thisAd=0
+		}
+		document.adBanner.src=adImages[thisAd]
+		setTimeout('rotate()',200)
+	}
+}
+function reloadPage()
+{
+    if (document.forms[0].hidden.value == "update_refresh") {
+      rotate()
+    }
+    else if (document.forms[0].hidden.value == "freshen") {
+      setTimeout("self.location.reload(true)", 10000)
+      rotate()
+    }
+}
+//-->
+</script>
+    </head>
+       <body>
+  <div id="wrapper">
+    <div id="whole-page">
+      <div id="main-content">
+        <div id="header">
+          <div id="tab-container">
+            <div id="logo-div">
+	      <img id="main-logo" src="Arris_NVG589_files/att_logo.png" alt="">
+              <img id="our-logo" src="Arris_NVG589_files/our_logo.png" alt="">
+            </div>
+            <div style="clear: both;"></div>
+<div id="skip"><a href="#content-sub">Skip to Main Content</a></div>
+            <div id="top-navigation">
+              <div id="top-navigation-buttons">
+<a class="topnav topnavselected" href="http://192.168.2.254/cgi-bin/home.ha"><span>Device</span></a>
+<a class="topnav" href="http://192.168.2.254/cgi-bin/broadbandstatistics.ha"><span>Broadband</span></a>
+<a class="topnav" href="http://192.168.2.254/cgi-bin/lanstatistics.ha"><span>
+Home Network
+</span></a>
+
+<a class="topnav" href="http://192.168.2.254/cgi-bin/voice.ha"><span>Voice</span></a>
+<a class="topnav" href="http://192.168.2.254/cgi-bin/firewall.ha"><span>Firewall</span></a>
+<a class="topnav" href="http://192.168.2.254/cgi-bin/diag.ha"><span>Diagnostics</span></a>
+              <div style="clear: both;"></div>
+            </div>
+          </div>
+          <div id="secondary-nav">
+            <div id="secondary-nav-buttons">
+<a class="secondary-link sec-selected" href="http://192.168.2.254/cgi-bin/home.ha">Status</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/devices.ha">Device List</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/sysinfo.ha">System Information</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/routerpasswd.ha">Access Code</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/remoteaccess.ha">Remote Access</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/battery.ha">Battery</a>
+<a class="secondary-link" href="http://192.168.2.254/cgi-bin/restart.ha">Restart Device</a>
+                  </div></div></div>
+                <div style="clear: both;"></div>
+              </div>
+        <div style="clear: both;"></div>
+      <div id="mid-section">
+          <div id="content-padding"><!-- CONTENT -->
+            <div id="content" style="width:938px;"><div id="content-sub">
+                <div class="first-section-header">
+                  <div class="status-section">
+                    <div class="button-header-container">
+                      <h1 class="button-header">Status</h1>
+                      <form method="post" action="/cgi-bin/sysinfo.ha">
+<input type="hidden" name="nonce" value="764fd6600021df753543a1e79cd4736e1415bf7f29f7d03a">
+                      <input type="submit" name="Sysinfo" class="cssbtn" value="More Info">
+                      </form>
+                      <div style="clear: both;"></div>
+                    </div>
+                    <!-- broadband -->
+                    <div class="status-div">
+                        <h2>Broadband</h2>
+                        <img class="status-img" src="Arris_NVG589_files/status_broadband.png" alt="Broadband" title="Broadband">
+                        <form method="post" action="/cgi-bin/crestart.ha?1">
+<input type="hidden" name="nonce" value="353ea5520021df7566da5e54509d8d73a5eafebcb3b2e0b8">
+                        <div class="status-line">
+                        <div class="status-label">Broadband Connection</div>
+<div class="status-value state-good">Up
+                                </div>
+                          <div class="status-button">
+                            <input type="submit" name="Broadband" class="cssbtn" value="Restart">
+                            </div>
+                        </div>
+                        </form>
+                        <div style="clear: both;"></div>
+                    </div><!-- status-div -->
+                    <div class="status-div">
+                        <h2>Battery</h2>
+                        <img class="status-img" src="Arris_NVG589_files/status_battery.png" alt="Battery" title="Battery">
+                        <form method="post" action="/cgi-bin/battery.ha">
+<input type="hidden" name="nonce" value="02140e480021df75493da854bda7f69674a067621def5383">
+                        <div class="status-line">
+                        <div class="status-label">Status</div>
+<div class="status-value state-bad"><img src="Arris_NVG589_files/error.png" alt="WARNING">WARNING <br>No battery or battery has no charge
+                        </div>
+                        <div class="status-button">
+                        <input type="submit" name="Battery" class="cssbtn" value="More Info">
+                        </div>
+                        </div>
+                        </form>
+                        <div style="clear: both;"></div>
+
+                    </div><!-- status-div -->
+                    <!-- wi-fi -->
+                    <div class="status-div">
+                        <h2>Wi-Fi</h2>
+                        <img class="status-img" src="Arris_NVG589_files/status_wifi.png" alt="Wi-Fi" title="Wi-Fi">
+                        <table class="status-table" summary="Wi-Fi for each configurable SSID on each Radio">
+                            <tbody><tr>
+                                <th scope="row" class="head" valign="top">Status</th>
+                                <td class="value">
+<span class="state-good">Enabled
+                            </span></td>
+                            <td class="button">
+                            <form method="post" action="/cgi-bin/wrestart.ha?1">
+<input type="hidden" name="nonce" value="51fa01870021df7571d34d6c3648f8ca901107ae10104421">
+                            <input type="submit" name="WRestart1" class="cssbtn" value="Restart">
+                            </form>
+                            </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="label">Network Name (SSID)</th>
+                                <td class="value" colspan="2"><div class="wraptext2">REDACTED</div></td><td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                               <th scope="row" class="label">Type</th>
+                               <td class="value">Home</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="label">Status</th>
+                              <td class="value">
+Enabled
+                            </td></tr>
+                            <tr>
+                                <th scope="row" class="label">Password</th>
+                                <td class="value" colspan="2"><div class="wraptext2">
+REDACTED
+</div></td><td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="label">Authentication Type</th>
+                                <td class="value">
+WPA
+</td><td>&nbsp;</td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <th scope="row" class="label">Network Name (SSID)</th>
+                                <td colspan="2" class="value2"><div class="wraptext2">REDACTED_Guest</div></td>
+                            </tr>
+                            <tr>
+                               <th scope="row" class="label">Type</th>
+                               <td class="value">Guest</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="label">Status</th>
+                              <td class="value">
+Disabled
+                            </td></tr>
+                            <tr>
+                                <th scope="row" class="label">Password</th>
+                                <td class="value" colspan="2"><div class="wraptext2">
+None
+</div></td><td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="label">Authentication Type</th>
+                                <td class="value">
+Disabled
+</td><td>&nbsp;</td>
+                            </tr>
+
+
+                        </tbody></table>
+                        <div style="clear: both;"></div>
+                    </div><!-- status-div -->
+                    <div class="status-div">
+                       <h2>Coax</h2>
+                        <img class="status-img" src="Arris_NVG589_files/status_coax.png" alt="Coax Connection" title="Coax Connection">
+                        <form method="post" action="/cgi-bin/hrestart.ha?1">
+<input type="hidden" name="nonce" value="215a5cbb0021df752fd43c206ce34805fc12936776a3ebcd">
+                        <div class="status-line">
+                          <div class="status-label">Status</div>
+<div class="status-value state-good">On
+                        </div>
+                        <div class="status-button">
+                        <input type="submit" name="HRestart" class="cssbtn" value="Restart">
+                        </div>
+                        </div>
+                        </form>
+                        <div style="clear: both;"></div>
+
+                    </div><!-- status-div -->
+                    <!-- voice -->
+                    <div class="status-div">
+                    <h2>VoIP</h2>
+                         <!-- voice line 1 -->
+                        <img class="status-img" src="Arris_NVG589_files/status_voice.png" alt="Voice" title="Voice">
+                    <form method="post" action="/cgi-bin/vrestart.ha?1">
+<input type="hidden" name="nonce" value="2fe159da0021df75519d817b24d7193fbc146ec275fdff06">
+                    <div class="status-line">
+                       <div class="status-label">Line 1 <span class="phonenumber">Not Subscribed</span></div>
+                       <div class="status-value state-bad"><img src="Arris_NVG589_files/error.png" alt="WARNING">Down                       </div>
+                       <div class="status-button">
+                       <input type="submit" name="VRestart1" class="cssbtn" value="Restart">
+                       </div>
+                       </div>
+                       </form>
+                        <div style="clear: both;"></div>
+                         <!-- voice line 2 -->
+                         <img class="status-img" src="Arris_NVG589_files/spacer.gif" alt="Voice" title="Voice" height="1">
+                       <form method="post" action="/cgi-bin/vrestart.ha?2">
+<input type="hidden" name="nonce" value="bd4656160021df759a47660cf8eeb744bf4bb93e8498c67a">
+                       <div class="status-line">
+                       <div class="status-label">Line 2 <span class="phonenumber">Not Subscribed</span></div>
+                       <div class="status-value state-bad"><img src="Arris_NVG589_files/error.png" alt="WARNING">Down                       </div>
+                       <div class="status-button">
+                       <input type="submit" name="VRestart2" class="cssbtn" value="Restart">
+                       </div>
+                       </div>
+                       </form>
+                        <div style="clear: both;"></div>
+                    </div><!-- status-div -->
+                  </div> <!-- status-section -->
+                  <div class="task-section">
+                    <h1>Common Tasks</h1>
+                    <div class="task-list" style="min-height:256px
+;">
+                    <a href="http://www.att.com/esupport/">Go to  AT&amp;T online support for troubleshooting and repair <span class="chevron">»</span></a><br>
+                    <a href="http://192.168.2.254/cgi-bin/wconfig.ha">Modify your Wi-Fi security or settings <span class="chevron">»</span></a><br>
+                    <a href="http://192.168.2.254/cgi-bin/restart.ha">Restart your device <span class="chevron">»</span></a><br>
+                    <a href="http://192.168.2.254/cgi-bin/devices.ha">Find a computer on your home
+ network <span class="chevron">»</span></a><br>
+                    <a href="http://192.168.2.254/cgi-bin/apphosting.ha">Adjust firewall settings for gaming and applications
+<span class="chevron">»</span></a><br>
+				    </div>
+                  </div>
+                  <div style="clear: both;"></div>
+                <!-- end of home -->
+                    <div class="button-header-container">
+                      <div class="button-header">Home Network Devices</div>
+                      <form method="post" action="/cgi-bin/devices.ha">
+<input type="hidden" name="nonce" value="bfaa3e480021df7500743b5fd2839d45ae1a4980d42a6b8e">
+                      <input type="submit" name="Devices" class="cssbtn" value="More Info">
+                      </form>
+                     </div>
+
+                 <table class="table100" summary="LAN Host Discovery Table">
+                    <tbody><tr>
+                      <th scope="col" width="33%">Device IP Address / Name</th>
+                      <th scope="col" width="8%">Status</th>
+                      <th scope="col" width="12%">Connection</th>
+                      <th scope="col" width="46%">Radio, Type, Name</th>
+                    </tr>
+
+</tbody></table>
+</div>
+                </div>
+              </div>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="footer">
+        <div><span class="inner">© 2018 ARRIS Enterprises, LLC. All rights reserved.</span><span class="sitemap"><a href="http://192.168.2.254/cgi-bin/sitemap.ha">Site Map</a></span></div>
+      </div>
+    </div>
+
+
+</body></html>

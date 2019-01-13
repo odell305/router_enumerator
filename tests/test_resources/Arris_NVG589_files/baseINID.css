@@ -1,0 +1,807 @@
+
+body li, body p, body div, body td {
+	font-size: 12px;
+	text-align: left;
+}
+
+html body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #191919;
+	background-color: #f2f2f2;
+	text-align: center;
+    margin: 0; /* crd */
+    padding: 0; /* crd */
+    width: 100%; /* crd */
+}
+select[disabled], input[disabled], input[disabled]:hover {
+    background: #f2f2f2;
+    color: #191919;
+    cursor: default;
+    border: 1px solid #191919;
+}
+
+img {
+	border: 0;
+}
+
+a, a:link, a:visited {
+	color: #191919;
+	text-decoration: underline;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+a:hover {
+	color: #0568ae;
+}
+a:focus {
+    font-style:italic;
+    text-decoration: underline;
+}
+a.sec-selected {
+    background: #f2f2f2;
+    font-weight: bold;
+    font-size: 14px;
+    height: 22px;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+a.topnav {
+	display: block;
+	color: #ffffff;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 26px;
+}
+a.topnavselected {
+	color: #191919;
+	background: #71c5e8;
+	font-weight: bold;
+	font-size: 14px;
+    text-decoration: none;
+}
+hr {
+	border: 0;
+	color: #0568ae;
+	background-color: #0568ae;
+	height: 1px;
+}
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0;
+	color: #0568ae;
+}
+h1.autodetect {
+    font-size: 18px;
+	margin-left:40px;
+}
+h1.autodetect.nomargin {
+	margin-left:0px;
+}
+h1.warning {
+	font-size: 14pt;
+	font-weight:bold;
+	color: #191919;
+	margin-left: 275px;
+}
+h2 {
+	font-size: 14px;
+	color: #0568ae;
+}
+.classh2{
+	font-size: 14px;
+	color: #0568ae;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+h2.warning {
+	font-size: 14pt;
+	font-weight:bold;
+	color: #191919;
+}
+h2.autodetect {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 40px;
+	color: #191919;
+}
+h2.autodetect.indent {
+	margin-left: 190px;
+}
+h3 {
+	font-size: 12px;
+	color: #cf2a2a;
+	font-weight:bold;
+}
+
+.gateway {
+    border-style:double;
+    padding:10px;
+    width:370px;
+    text-align:center;
+}
+.INIDWARNINGLarge {
+	font-size:14pt;
+	font-weight:bold;
+	width:649px
+}
+
+#secTime {
+	font-size:14pt;
+	font-weight:bold;
+	width:649px;
+	color: #0568ae;
+}
+
+.respass {
+	color: #007a3e;
+}
+
+.resfail {
+	color: #cf2a2a;
+}
+.remote-access {
+	color: #cf2a2a;
+	font-weight: bold;
+}
+
+.INIDinfo {
+	color:#191919;
+	font-size:12px;
+}
+
+caption {
+	color:#191919;
+	font-size:12px;
+	text-align:left;
+}
+caption.hide {
+    color: white;
+    font-size:2px;
+}
+.col1 {
+	color:#191919;
+	font-size: 12px;
+	font-weight:bold;
+}
+
+.example {
+    font-size: 11px;
+    font-style: italic;
+}
+.examplepin {
+    font-size: 11px;
+    font-style: italic;
+    padding-left:65px;
+}
+.LB_format {
+    font-size: 11px;
+    font-style: italic;
+    padding-bottom:-60px;
+}
+.input_example {
+    padding-top:14px;
+    padding-bottom:4px;
+}
+th {
+	color:#191919;
+	font-size: 12px;
+	font-weight:bold;
+	text-align:left;
+}
+.ipdiags {
+	margin-top: -64px;
+	margin-left: 150px;
+	color:#191919;
+	font-size: 12px;
+}
+
+.col2 {
+	color:#191919;
+	font-size: 12px;
+	font-weight: normal;
+}
+.hide {
+	visibility:hidden;
+	word-wrap: break-word;
+}
+#wrapper {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 983px;
+	background-color: #f2f2f2;
+}
+
+#footer {
+	margin: 0;
+	padding-top: 3px;
+	height: 60px;
+	width: 983px;
+	clear: both;
+}
+
+#whole-page {
+	width: 943px;
+	background: #ffffff;
+	margin: 0;
+	padding: 10px 20px 20px 20px;
+}
+
+#header {
+	float: left;
+	width: 940px;  /* blue - crd, changed padding, was 791px*/
+	padding-bottom: 8px;  /* blue - crd, changed padding */
+}
+
+#main-content {
+	float: left;
+	width: 943px;
+	min-height: 456px;
+	padding-bottom: 8px;
+	background-color: #ffffff;
+}
+
+#mid-section {
+	float: left;
+	min-height: 356px;
+	clear: both;
+}
+
+#content-padding {
+	float: left;
+	padding-left: 0px;
+	margin: 0;
+}
+
+#content-sub {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#tab-container {
+	float: left;
+	width: 940px;  /* blue - crd ,  was 622 */
+}
+
+#content {
+	float: left;
+	width: 638px;
+	min-height: 356px;
+	border: 1px solid #CCCCCC;
+}
+
+#top-navigation {
+	height: 26px;
+	width: 940px;
+	margin: 0;
+	background: #0568ae;
+	color: #ffffff;
+}
+
+#top-navigation-buttons {
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+.topnav {
+	display: inline;
+	float: left;
+	height: 26px;
+}
+
+.topnav a span {
+ 	padding: 0;
+}
+
+.topnav:hover {
+	text-decoration: none;
+}
+.topnav:focus {
+			text-decoration: none;
+}
+
+.topnav span {
+	padding-left: 8px;
+}
+
+.topnavselected a:focus {
+    text-decoration: none;
+}
+
+/* crd textnav - added whole section */
+
+#secondary-nav {
+	height: 28px;
+	width: 940px;
+	margin: 0;
+	background: #71c5e8;
+}
+
+#secondary-nav-buttons {
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+.secondary-link {
+    display: inline;
+    float: left;
+    height: 26px;
+	color: #191919;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 6px;
+
+}
+.secondary-link a span {
+    padding: 0;
+}
+.secondary-link:hover {
+    color:#191919;
+    text-decoration: none;
+}
+.secondary-link:focus {
+	text-decoration: none;
+	color: #191919;
+}
+
+.secondary-link span {
+    padding-left: 8px;
+}
+
+.sec-selected:focus {
+	text-decoration: none;
+	color: #191919;
+}
+.sec-selected a {
+    color: #191919;
+    font-weight: bold;
+    text-decoration: none;
+}
+#logo-div {
+	width: 100%;
+	margin: 0;
+	display: inline-block;
+}
+
+#main-logo {
+	float: left;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom:15px;
+}
+
+#our-logo {
+	float: right;
+	padding-top: 16px;
+	padding-right: 5px;
+}
+
+.first-section-header {
+	margin: 0px 0px 0px 0px;
+	clear: both;
+}
+
+.section-header {
+	margin: 0px 0px 0px 0px;
+	clear: both;
+}
+
+.section-content {
+	width: 602px;
+}
+
+pre {
+	font-size: 10px;
+}
+
+#help {
+	float: left;
+	width: 290px;
+	border: 0;
+	padding-left: 10px;
+}
+
+#help-sub {
+	color: #191919;
+	background: #d2d2d2;
+	border-top: 2px solid #191919;
+	border-bottom: 2px solid #191919;
+	padding: 5px;
+}
+
+
+#help-sub h1 {
+	color: #191919;
+	font-size: 14px;
+}
+
+#help-sub h2 {
+	color: #191919;
+	font-size: 12px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+/* home page */
+
+.button-header-container{
+  margin-bottom: 10px;
+}
+
+.button-header {
+    width: 322px;
+    float: left;
+    display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0568ae;
+}
+
+.status-section {
+	float: left;
+	width: 50%;
+}
+.troubleshoot-section {
+	width: 100%;
+}
+.trouble-buttons {
+    float: right;
+}
+.trouble-steps {
+	color:#191919;
+	font-size: 12px;
+	font-weight:bold;
+    padding-bottom: 8px;
+}
+
+fieldset {
+    border: none;
+    margin-left: -5px;
+}
+legend {
+    display: none;
+}
+
+.status-div {
+	width: 443px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	background-color: #f2f2f2;
+	border: 1px solid #959595;
+}
+.status-div h2 {
+    visibility: hidden;
+    font-size: 1px;
+}
+.status-img {
+	padding-top: 4px;
+	width: 77px;
+	float: left;
+}
+
+.status-line,
+.status-table {
+	display: inline-block;
+	padding: 0px;
+	width: 360px;
+}
+
+.status-label {
+	font-weight: bold;
+	width: 134px;
+	overflow: hidden;
+	float: left;
+}
+.status-table td.label,
+.status-table th.label {
+	font-weight: bold;
+	width: 134px;
+}
+.status-table th.head {
+	font-weight: bold;
+	color: #0568ae;
+	width: 132px;
+}
+.status-value {
+	font-weight: bold;
+	width: 109px;
+	overflow: hidden;
+	float: left;
+}
+.status-table td.value {
+	font-weight: bold;
+	width: 109px;
+}
+.status-table td.value2 {
+	font-weight: bold;
+	width: 216px;
+}
+
+.status-button {
+	width: 114px;
+	overflow: hidden;
+	float: left;
+}
+.status-table td.button {
+	width: 114px;
+}
+
+/* state of the value */
+
+.state-good {
+	font-weight: bold;
+	color: #007a3e;
+}
+
+.state-bad {
+	font-weight: bold;
+	color: #cf2a2a;
+}
+
+.state-bad img {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.state-off {
+	font-weight: bold;
+}
+
+.phonenumber {
+	font-weight: normal;
+}
+
+.task-section {
+	float: left;
+	width: 50%;
+}
+
+.task-list {
+	padding: 10px;
+	background: #f2f2f2;
+	border: 1px solid #191919;
+}
+
+.task-list a {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 24px;
+	font-size: 12px;
+	color: #191919;
+}
+
+.task-list a:hover {
+	color: #0568ae;
+	text-decoration: underline;
+}
+
+.chevron {
+	font-weight: bold;
+	font-size: 14px;
+	color: #0568ae;
+}
+
+div.wraptext
+{
+	word-wrap: break-word;
+	width: 100px;
+}
+div.wraptext2
+{
+	word-wrap: break-word;
+	width: 200px;
+}
+div.wrapmacfilt
+{
+	word-wrap: break-word;
+	width: 160px;
+}
+/* ---- start accessibile errors ---- */
+
+.errorbox {
+	margin-bottom: 8px;
+	color: #cf2a2a;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.errorbox img {
+	vertical-align: middle;
+	margin-right: 7px;
+	padding-bottom: 3px;
+}
+
+input[type="text"] {
+	border: 1px solid #7f9db9;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+input.bad {
+	border: 1px solid #cf2a2a;
+}
+
+input.cssbtn:focus {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.gssid {
+	color:#191919;
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: baseline;
+}
+
+select.bad {
+	border: 1px solid #cf2a2a;
+}
+
+label {
+	position: relative;  /* use the label as the reference location for the error message em (for absolute positioning) */
+}
+em {
+	font-size: 12px;
+	font-weight:bold;
+	position: absolute; /* position 336px to the right of the label */
+	left: 340px;
+	padding-top: 1px;
+	width: 274px;
+	float: left;
+}
+em.bad {
+	font-style: italic;
+	color: #cf2a2a;
+}
+em.goody {
+	color: #191919;
+	font-style: normal;
+}
+em.dhcp {
+	left: 360px;
+}
+em.second {
+	left: 90px;
+	width: 150px;
+}
+em.closest {
+	left: 110px;
+	width: 150px;
+}
+em.closer {
+	left: 160px;
+	width: 240px;
+}
+em.close {
+	left: 210px;
+	width: 240px;
+}
+em.narrow {
+	width: 240px;
+}
+
+em.farther {
+	left: 400px;
+	width: 225px;
+}
+em.farthest {
+	left: 468px;
+	width: 152px;
+}
+em.syslog {
+	left: 472px;
+	width: 148px;
+}
+em.rightmost {
+	left: 510px;
+	width: 105px;
+}
+
+em.hostmac {
+	left: 525px;
+	width: 140px;
+}
+em.special {
+	left: 300px;
+	width: 240px;
+	top: 14px;
+}
+em.passwd {
+	left: 400px;
+	width: 225px;
+	top: 20px;
+}
+em.defaults {
+	left: 400px;
+	width: 225px;
+	top: 2px;
+}
+em.flood {
+    left:480px;
+    width 100px;
+}
+em.nodisp {
+	visibility: hidden;
+}
+em.dhcpday {
+	left: 210px;
+	width: 250px;
+}
+em.rapass {
+	left: 376px;
+	width: 250px;
+}
+.time {
+	width:40px;
+}
+/* ------ end accessible errors ------ */
+.ethports {
+    width: 105px;
+}
+
+.errlogin {
+    width: 185px;
+}
+.errport {
+    width: 75px;
+}
+.err2addr {
+    width: 350px;
+}
+.erraddr {
+    width: 150px;
+}
+.erripmac {
+    width: 125px;
+}
+.errservice {
+    width: 325px;
+}
+.errgssid {
+    width: 35px;
+}
+.table100 {
+    width: 100%;
+}
+.table85 {
+    width: 85%;
+}
+.table80 {
+    width: 80%;
+}
+.table75 {
+    width: 75%;
+}
+.table66 {
+    width: 66%;
+}
+.table60 {
+    width: 60%;
+}
+.table50 {
+    width: 50%;
+}
+.table32 {
+    width: 32%;
+}
+.table30 {
+    width: 30%;
+}
+.table18 {
+    width: 18%;
+}
+.table15 {
+    width: 15%;
+}
