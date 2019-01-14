@@ -2,6 +2,7 @@ import unittest
 from router_enumerator.RouterEnumerator import RouterEnumerator
 from pathlib import Path, PurePath
 from selenium import webdriver
+from router_enumerator import exceptions
 
 driver = webdriver.Firefox()
 
