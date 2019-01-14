@@ -13,7 +13,7 @@ assert ROUTERS_DB_PATH.is_file()
 
 ARRIS_NVG5689 = PurePath.joinpath(TEST_RESOURCES_DIR, 'Arris_NVG589.html')
 assert ARRIS_NVG5689.is_file()
-ARRIS_NVG589_HTML = ARRIS_NVG5689.read_text(encoding='UTF-8')
+ARRIS_NVG589_HTML = ARRIS_NVG5689.read_text()
 
 
 class TestRouterEnumerator(unittest.TestCase):
@@ -28,6 +28,36 @@ class TestRouterEnumerator(unittest.TestCase):
         expected_url = "http://192.168.1.254/"
         driver.get("http://192.168.1.254/")
         self.assertEquals(expected_url, "http://192.168.1.254/")
+
+    def test_arris_is_in_manufacturers(self):
+        mfrs = self.router_enumerator.get_manufacturers()
+        self.assertTrue('arris' in mfrs)
+
+    def test_enumerating_router_without_source_raises_NoPageSourceException(self):
+        page_html = ARRIS_NVG589_HTML
+
+        with self.assertRaises(exceptions.NoPageSourceException):
+            self.router_enumerator.enumerate_from_source(page_html)
+
+    def test_arris_nvg589_page_returns_arris_as_manufacturer(self):
+        page_html = ARRIS_NVG589_HTML
+
+        self.router_enumerator.enumerate_from_source(page_html)
+
+        expected = 'arris'
+        actual = self.router_enumerator.manufacturer
+
+        self.assertEqual(expected, actual)
+
+    def test_arris_nvg589_page_returns_nvg589_as_model(self):
+        page_html = ARRIS_NVG589_HTML
+
+        self.router_enumerator.enumerate_from_source(page_html)
+
+        expected = 'nvg589'
+        actual = self.router_enumerator.model
+
+        self.assertEqual(expected, actual)
 
     def test_arris_nvg589_html_returns_correct_name_when_enumerating_from_source(self):
         page_html = ARRIS_NVG589_HTML
