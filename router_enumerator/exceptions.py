@@ -1,2 +1,0 @@
-class NoPageSourceException(Exception):
-    pass

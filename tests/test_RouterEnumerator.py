@@ -34,16 +34,10 @@ class TestRouterEnumerator(unittest.TestCase):
         mfrs = self.router_enumerator.get_manufacturers()
         self.assertTrue('arris' in mfrs)
 
-    def test_enumerating_router_without_source_raises_NoPageSourceException(self):
-        page_html = ARRIS_NVG589_HTML
-
-        with self.assertRaises(exceptions.NoPageSourceException):
-            self.router_enumerator.enumerate_from_source(page_html)
-
     def test_arris_nvg589_page_returns_arris_as_manufacturer(self):
         page_html = ARRIS_NVG589_HTML
 
-        self.router_enumerator.enumerate_from_source(page_html)
+        self.router_enumerator.enumerate_from_string(page_html)
 
         expected = 'arris'
         actual = self.router_enumerator.manufacturer
@@ -53,7 +47,7 @@ class TestRouterEnumerator(unittest.TestCase):
     def test_arris_nvg589_page_returns_nvg589_as_model(self):
         page_html = ARRIS_NVG589_HTML
 
-        self.router_enumerator.enumerate_from_source(page_html)
+        self.router_enumerator.enumerate_from_string(page_html)
 
         expected = 'nvg589'
         actual = self.router_enumerator.model
@@ -63,7 +57,7 @@ class TestRouterEnumerator(unittest.TestCase):
     def test_arris_nvg589_html_returns_correct_name_when_enumerating_from_source(self):
         page_html = ARRIS_NVG589_HTML
 
-        self.router_enumerator.enumerate_from_source(page_html)
+        self.router_enumerator.enumerate_from_string(page_html)
 
         expected = 'arris nvg589'
         actual = self.router_enumerator.full_name
